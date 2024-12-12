@@ -1,3 +1,5 @@
+import 'package:businesscard/Screens/HelpScreen/helpScreen.dart';
+import 'package:businesscard/Screens/SubscriptionScreen/SubscriptionScreen.dart';
 import 'package:businesscard/Widgets/ATMCardWidget.dart';
 import 'package:businesscard/Widgets/Lists.dart';
 import 'package:businesscard/Widgets/assetsImages.dart';
@@ -32,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         bottomRight: Radius.circular(20)),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 30),
+                    padding: const EdgeInsets.only(left: 30,bottom: 70),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -128,9 +130,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(
                                 width: size.width * 0.03,
                               ),
-                              Text(
-                                "Manage Card",
-                                style: TextStyle(color: Colors.white),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder:(context) => HelpScreen(),));
+                                },
+                                child: Text(
+                                  "Manage Card",
+                                  style: TextStyle(color: Colors.white),
+                                ),
                               ),
                             ],
                           ),
@@ -152,11 +159,16 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(
                                 width: size.width * 0.03,
                               ),
-                              Text(
-                                "Share Digital",
-                                style: TextStyle(
-                                    color:
-                                        const Color.fromARGB(255, 4, 48, 83)),
+                              GestureDetector(
+                                 onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder:(context) =>SubscriptionScreen(),));
+                                },
+                                child: Text(
+                                  "Share Digital",
+                                  style: TextStyle(
+                                      color:
+                                          const Color.fromARGB(255, 4, 48, 83)),
+                                ),
                               ),
                             ],
                           ),

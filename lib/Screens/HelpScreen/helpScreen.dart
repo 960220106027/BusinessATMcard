@@ -90,14 +90,14 @@ class _HelpScreenState extends State<HelpScreen> {
               child: ListTile(
                 leading: CircleAvatar(radius: 30,
                   backgroundColor: const Color.fromARGB(255, 177, 214, 245),
-                  child: Icon(Icons.call, color: Colors.blue),
+                  child: Icon(Icons.mail, color: Colors.blue),
                 ),
                 title: Text(
-                  "Our 24x7 Customer Service",
+                  "Write us at",
                   style: TextStyle(fontSize: 16),
                 ),
                 subtitle: Text(
-                  "+91 9090876543",
+                  "support@gmail.com",
                   style: TextStyle(color: Colors.blue),
                 ),
               ),
